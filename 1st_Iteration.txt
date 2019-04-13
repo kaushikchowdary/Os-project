@@ -1,0 +1,17 @@
+printf("\n****************************** 1st ITERATION (TQ=3) ****************************\n");
+	for(i=0;i<m;i++)
+	{  
+	if(arrival[i]<=tq1+arrival[i-1])
+	{
+	
+		burst[i]=burst[i]-tq1;
+		
+		printf("\nFor process %d\n",i+1);
+		printf("Left Burst time=%d\n",burst[i]);}
+		else
+		{
+		burst[i]=burst[i]-tq1;
+	
+		printf("For process %d\n",i+1);
+		printf("Left Burst time= %d\n",burst[i]);	
+		}}

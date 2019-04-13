@@ -1,0 +1,27 @@
+printf("\n****************************** 3rd ITERATION ***********************************\n");
+	int j,temp;
+
+	for(i=0;i<m;i++)
+	{
+		for(j=i+1;j<m;j++)
+		{if(burst[i]>burst[j])
+		{
+		
+			temp=burst[i];
+			burst[i]=burst[j];
+			burst[j]=temp;
+			}
+		}
+	}
+	int ct[4]={54,68,45,41};
+	for(i=0;i<m;i++)
+	{
+		tarrival[i]=ct[i]-arrival[i];
+		waiting[i]=tarrival[i]-burst1[i];
+		printf("\nCompletion time for process %d : %d \n",i+1,ct[i]);
+		printf("Turn arround time for process %d : %d \n",i+1,tarrival[i]);
+		printf("Waiting time for process %d : %d \n",i+1,waiting[i]);
+		avgT=avgT+tarrival[i];
+		avgW=avgW+waiting[i];
+		
+	}
